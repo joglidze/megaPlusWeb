@@ -1,0 +1,626 @@
+<div class="text-center p-2 m-5">
+  <div>
+    <h1 class="fw-bold fs-2">ფასები</h1>
+    <h1 class="fs-5">
+      ფასი არის ყოველთვიური და მოიცავს მომსახურებასაც თანხები მოცემულია დღგ-ს
+      ჩათვლით
+    </h1>
+  </div>
+  <div class="container">
+    <div class="row w-100">
+      <div class="col-lg-4">
+        <div class="card text-center">
+          <div class="card-header"><h1 class="mb-0 fw-bold">სუპერი</h1></div>
+          <div class="card-body">
+            <h1 class="fw-bold p-2">150ლ</h1>
+            <p class="card-text">დამატებითი ლიცენზია 50₾</p>
+            <mat-expansion-panel
+              class="m-3"
+              (opened)="panelOpenState = true"
+              (closed)="panelOpenState = false"
+            >
+              <mat-expansion-panel-header>
+                <mat-panel-title> ძირითადი მოდულები </mat-panel-title>
+              </mat-expansion-panel-header>
+              <mat-list role="list">
+                <mat-list-item class="fit">
+                  <p>სტანდარტული სალაროს მოდული</p>
+                </mat-list-item>
+                <mat-list-item role="listitem" class="fit"
+                  ><p>კვების ობიექტის სალაროს მოდული</p>
+                </mat-list-item>
+                <mat-list-item role="listitem"
+                  ><p>შესყიდვები RS-ს მეშვეობით</p>
+                </mat-list-item>
+                <mat-list-item role="listitem"
+                  ><p>დაბრუნება RS-ს მეშვეობით</p>
+                </mat-list-item>
+                <mat-list-item role="listitem"
+                  ><p>პროდუქციის ჩამოწერა</p>
+                </mat-list-item>
+                <mat-list-item role="listitem"
+                  ><p>სალაროს მართვა</p>
+                </mat-list-item>
+                <mat-list-item role="listitem"
+                  ><p>ნაშთების მართვა</p>
+                </mat-list-item>
+                <mat-list-item role="listitem"
+                  ><p>საწყობების მართვა</p>
+                </mat-list-item>
+                <mat-list-item role="listitem"
+                  ><p>კატეგორიების მართვა</p>
+                </mat-list-item>
+                <mat-list-item role="listitem"
+                  ><p>დავალიანებების მართვა</p>
+                </mat-list-item>
+                <mat-list-item role="listitem"
+                  ><p>ხელშეკრულებების მართვა</p>
+                </mat-list-item>
+                <mat-list-item role="listitem"
+                  ><p>გადაადგილება საწყობებს შორის</p>
+                </mat-list-item>
+                <mat-list-item role="listitem" class="fit">
+                  <p>პერსონალის მონაცემების მართვა</p>
+                </mat-list-item>
+                <mat-list-item role="listitem" class="fit">
+                  <p>პერსონალის ფუნქციონალის მართვა</p>
+                </mat-list-item>
+              </mat-list>
+            </mat-expansion-panel>
+
+            <mat-expansion-panel
+              class="m-3"
+              (opened)="panelOpenState = true"
+              (closed)="panelOpenState = false"
+            >
+              <mat-expansion-panel-header>
+                <mat-panel-title> ინვენტარიზაცია </mat-panel-title>
+              </mat-expansion-panel-header>
+              <mat-list role="list">
+                <mat-list-item role="listitem">
+                  <p>ინვენტარიზაცია ჯგუფით</p>
+                </mat-list-item>
+                <mat-list-item role="listitem"
+                  ><p>ინვენტარიზაცია მომწოდებლით</p>
+                </mat-list-item>
+                <mat-list-item role="listitem" class="fit">
+                  <p>ინვენტარიზაცია შედგენილი სიით</p>
+                </mat-list-item>
+                <mat-list-item role="listitem" class="fit">
+                  <p>ინვენტარიზაციის Android მოდული</p>
+                </mat-list-item>
+              </mat-list>
+            </mat-expansion-panel>
+
+            <mat-expansion-panel
+              class="m-3"
+              (opened)="panelOpenState = true"
+              (closed)="panelOpenState = false"
+            >
+              <mat-expansion-panel-header>
+                <mat-panel-title> დამხმარე მოდულები </mat-panel-title>
+              </mat-expansion-panel-header>
+              <mat-list role="list">
+                <mat-list-item role="listitem">
+                  <p>სალაროს წიგნი</p>
+                </mat-list-item>
+                <mat-list-item role="listitem">
+                  <p>აქციების მართვა</p>
+                </mat-list-item>
+                <mat-list-item role="listitem"
+                  ><p>ავტომატური ბექაფი</p>
+                </mat-list-item>
+                <mat-list-item role="listitem">
+                  <p>დაგროვების მოდული</p>
+                </mat-list-item>
+                <mat-list-item role="listitem">
+                  <p>ლოიალობის მოდული</p>
+                </mat-list-item>
+                <mat-list-item role="listitem">
+                  <p>ავტონომიური სალარო</p>
+                </mat-list-item>
+                <mat-list-item role="listitem">
+                  <p>ავტომატური შეკვეთები</p>
+                </mat-list-item>
+                <mat-list-item role="listitem">
+                  <p>კალკულაცია და წარმოება</p>
+                </mat-list-item>
+                <mat-list-item role="listitem">
+                  <p>პროდუქციის კონვერტაცია</p>
+                </mat-list-item>
+                <mat-list-item role="listitem">
+                  <p>საათობრივი ფასდაკლებები</p>
+                </mat-list-item>
+              </mat-list>
+            </mat-expansion-panel>
+
+            <mat-expansion-panel
+              class="m-3"
+              (opened)="panelOpenState = true"
+              (closed)="panelOpenState = false"
+            >
+              <mat-expansion-panel-header>
+                <mat-panel-title> რეპორტები </mat-panel-title>
+              </mat-expansion-panel-header>
+              <mat-list role="list">
+                <mat-list-item role="listitem">
+                  <p>შესყიდვების რეპორტები</p>
+                </mat-list-item>
+                <mat-list-item role="listitem"
+                  ><p>რეალიზაციის რეპორტები</p>
+                </mat-list-item>
+                <mat-list-item role="listitem">
+                  <p>საქონლის მოძრაობის რეპორტი</p>
+                </mat-list-item>
+                <mat-list-item role="listitem">
+                  <p>რეალიზაციები ზედნადებით</p>
+                </mat-list-item>
+              </mat-list>
+            </mat-expansion-panel>
+
+            <mat-expansion-panel
+              class="m-3"
+              (opened)="panelOpenState = true"
+              (closed)="panelOpenState = false"
+            >
+              <mat-expansion-panel-header>
+                <mat-panel-title> ინტეგრაცია </mat-panel-title>
+              </mat-expansion-panel-header>
+              <mat-list role="list">
+                <mat-list-item role="listitem">
+                  <p>BOG იმპორტი (xlsx)</p>
+                </mat-list-item>
+                <mat-list-item role="listitem"
+                  ><p>TBC იმპორტი (xlsx)</p>
+                </mat-list-item>
+                <mat-list-item role="listitem">
+                  <p>TBC იმპორტი (ინტეგრაცია)</p>
+                </mat-list-item>
+                <mat-list-item role="listitem">
+                  <p>სალარო აპარატების ინტეგრაცია</p>
+                </mat-list-item>
+                <mat-list-item role="listitem">
+                  <p>საბანკო ტერმინალის ინტეგრაცია</p>
+                </mat-list-item>
+                <mat-list-item role="listitem">
+                  <p>ჭკვიანი სასწორების ინტეგრაცია</p>
+                </mat-list-item>
+                <mat-list-item role="listitem" class="fit">
+                  <p>შტრიხკოდის სკანერის ინტეგრაცია</p>
+                </mat-list-item>
+                <mat-list-item role="listitem" class="fit">
+                  <p>ჩამონათვალის პრინტერის ინტეგრაცია</p>
+                </mat-list-item>
+              </mat-list>
+            </mat-expansion-panel>
+            <div>
+              <h2 class="fs-4">ნომენკლატურის რაოდენობა</h2>
+              <p class="text-success fw-bold">შეუზღუდავი</p>
+              <button type="button" class="btn btn-danger">შეუკვეთე</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="card text-center m-2">
+          <div class="card-header"><h1 class="mb-0 fw-bold">ექსტრა</h1></div>
+          <div class="card-body">
+            <h1 class="fw-bold p-2">118ლ</h1>
+            <p class="card-text">დამატებითი ლიცენზია 50₾</p>
+            <mat-expansion-panel
+              class="m-3"
+              (opened)="panelOpenState = true"
+              (closed)="panelOpenState = false"
+            >
+              <mat-expansion-panel-header>
+                <mat-panel-title> ძირითადი მოდულები </mat-panel-title>
+              </mat-expansion-panel-header>
+              <mat-list role="list">
+                <mat-list-item class="fit"
+                  ><p>სტანდარტული სალაროს მოდული</p>
+                </mat-list-item>
+                <mat-list-item
+                  role="listitem"
+                  class="text-decoration-line-through text-danger fit"
+                  ><p class="text-danger">კვების ობიექტის სალაროს მოდული</p>
+                </mat-list-item>
+                <mat-list-item role="listitem" class="fit"
+                  ><p>შესყიდვები RS-ს მეშვეობით</p>
+                </mat-list-item>
+                <mat-list-item role="listitem"
+                  ><p>დაბრუნება RS-ს მეშვეობით</p>
+                </mat-list-item>
+                <mat-list-item role="listitem"
+                  ><p>პროდუქციის ჩამოწერა</p>
+                </mat-list-item>
+                <mat-list-item role="listitem"
+                  ><p>სალაროს მართვა</p>
+                </mat-list-item>
+                <mat-list-item role="listitem"
+                  ><p>ნაშთების მართვა</p>
+                </mat-list-item>
+                <mat-list-item
+                  role="listitem"
+                  class="text-decoration-line-through"
+                  ><p class="text-danger">საწყობების მართვა</p>
+                </mat-list-item>
+                <mat-list-item role="listitem"
+                  ><p>კატეგორიების მართვა</p>
+                </mat-list-item>
+                <mat-list-item role="listitem"
+                  ><p>დავალიანებების მართვა</p>
+                </mat-list-item>
+                <mat-list-item
+                  role="listitem"
+                  class="text-decoration-line-through"
+                  ><p class="text-danger">ხელშეკრულებების მართვა</p>
+                </mat-list-item>
+                <mat-list-item
+                  role="listitem"
+                  class="text-decoration-line-through fit"
+                  ><p class="text-danger">
+                    გადაადგილება საწყობებს შორის
+                  </p></mat-list-item
+                >
+                <mat-list-item role="listitem" class="fit">
+                  <p>პერსონალის მონაცემების მართვა</p>
+                </mat-list-item>
+                <mat-list-item role="listitem" class="fit">
+                  <p>პერსონალის ფუნქციონალის მართვა</p>
+                </mat-list-item>
+              </mat-list>
+            </mat-expansion-panel>
+
+            <mat-expansion-panel
+              class="m-3"
+              (opened)="panelOpenState = true"
+              (closed)="panelOpenState = false"
+            >
+              <mat-expansion-panel-header>
+                <mat-panel-title> ინვენტარიზაცია </mat-panel-title>
+              </mat-expansion-panel-header>
+              <mat-list role="list">
+                <mat-list-item role="listitem">
+                  <p>ინვენტარიზაცია ჯგუფით</p>
+                </mat-list-item>
+                <mat-list-item role="listitem" class="fit"
+                  ><p>ინვენტარიზაცია მომწოდებლით</p>
+                </mat-list-item>
+                <mat-list-item role="listitem" class="fit">
+                  <p>ინვენტარიზაცია შედგენილი სიით</p>
+                </mat-list-item>
+                <mat-list-item role="listitem" class="fit">
+                  <p>ინვენტარიზაციის Android მოდული</p>
+                </mat-list-item>
+              </mat-list>
+            </mat-expansion-panel>
+
+            <mat-expansion-panel
+              class="m-3"
+              (opened)="panelOpenState = true"
+              (closed)="panelOpenState = false"
+            >
+              <mat-expansion-panel-header>
+                <mat-panel-title> დამხმარე მოდულები </mat-panel-title>
+              </mat-expansion-panel-header>
+              <mat-list role="list">
+                <mat-list-item role="listitem">
+                  <p>სალაროს წიგნი</p>
+                </mat-list-item>
+                <mat-list-item role="listitem">
+                  <p>აქციების მართვა</p>
+                </mat-list-item>
+                <mat-list-item role="listitem"
+                  ><p>ავტომატური ბექაფი</p>
+                </mat-list-item>
+                <mat-list-item role="listitem">
+                  <p>დაგროვების მოდული</p>
+                </mat-list-item>
+                <mat-list-item role="listitem">
+                  <p>ლოიალობის მოდული</p>
+                </mat-list-item>
+                <mat-list-item role="listitem">
+                  <p>ავტონომიური სალარო</p>
+                </mat-list-item>
+                <mat-list-item role="listitem">
+                  <p>ავტომატური შეკვეთები</p>
+                </mat-list-item>
+                <mat-list-item
+                  role="listitem"
+                  class="text-decoration-line-through"
+                >
+                  <p class="text-danger">კალკულაცია და წარმოება</p>
+                </mat-list-item>
+                <mat-list-item role="listitem">
+                  <p>პროდუქციის კონვერტაცია</p>
+                </mat-list-item>
+                <mat-list-item role="listitem">
+                  <p>საათობრივი ფასდაკლებები</p>
+                </mat-list-item>
+              </mat-list>
+            </mat-expansion-panel>
+
+            <mat-expansion-panel
+              class="m-3"
+              (opened)="panelOpenState = true"
+              (closed)="panelOpenState = false"
+            >
+              <mat-expansion-panel-header>
+                <mat-panel-title> რეპორტები </mat-panel-title>
+              </mat-expansion-panel-header>
+              <mat-list role="list">
+                <mat-list-item role="listitem">
+                  <p>შესყიდვების რეპორტები</p>
+                </mat-list-item>
+                <mat-list-item role="listitem"
+                  ><p>რეალიზაციის რეპორტები</p>
+                </mat-list-item>
+                <mat-list-item role="listitem">
+                  <p>საქონლის მოძრაობის რეპორტი</p>
+                </mat-list-item>
+                <mat-list-item role="listitem">
+                  <p>რეალიზაციები ზედნადებით</p>
+                </mat-list-item>
+              </mat-list>
+            </mat-expansion-panel>
+
+            <mat-expansion-panel
+              class="m-3"
+              (opened)="panelOpenState = true"
+              (closed)="panelOpenState = false"
+            >
+              <mat-expansion-panel-header>
+                <mat-panel-title> ინტეგრაცია </mat-panel-title>
+              </mat-expansion-panel-header>
+              <mat-list role="list">
+                <mat-list-item role="listitem">
+                  <p>BOG იმპორტი (xlsx)</p>
+                </mat-list-item>
+                <mat-list-item role="listitem"
+                  ><p>TBC იმპორტი (xlsx)</p>
+                </mat-list-item>
+                <mat-list-item role="listitem">
+                  <p>TBC იმპორტი (ინტეგრაცია)</p>
+                </mat-list-item>
+                <mat-list-item role="listitem" class="fit">
+                  <p>სალარო აპარატების ინტეგრაცია</p>
+                </mat-list-item>
+                <mat-list-item role="listitem" class="fit">
+                  <p>საბანკო ტერმინალის ინტეგრაცია</p>
+                </mat-list-item>
+                <mat-list-item role="listitem" class="fit">
+                  <p>ჭკვიანი სასწორების ინტეგრაცია</p>
+                </mat-list-item>
+                <mat-list-item role="listitem" class="fit">
+                  <p>შტრიხკოდის სკანერის ინტეგრაცია</p>
+                </mat-list-item>
+                <mat-list-item role="listitem" class="fit">
+                  <p>ჩამონათვალის პრინტერის ინტეგრაცია</p>
+                </mat-list-item>
+              </mat-list>
+            </mat-expansion-panel>
+            <div>
+              <h2 class="fs-4">ნომენკლატურის რაოდენობა</h2>
+              <p class="text-success fw-bold">შეუზღუდავი</p>
+              <button type="button" class="btn btn-danger">შეუკვეთე</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="card text-center m-2">
+          <div class="card-header"><h1 class="mb-0 fw-bold">მინი</h1></div>
+          <div class="card-body">
+            <h1 class="fw-bold p-2">50ლ</h1>
+            <p class="card-text">დამატებითი ლიცენზია 50₾</p>
+            <mat-expansion-panel
+              class="m-3"
+              (opened)="panelOpenState = true"
+              (closed)="panelOpenState = false"
+            >
+              <mat-expansion-panel-header>
+                <mat-panel-title> ძირითადი მოდულები </mat-panel-title>
+              </mat-expansion-panel-header>
+              <mat-list role="list">
+                <mat-list-item class="fit"
+                  ><p>სტანდარტული სალაროს მოდული</p>
+                </mat-list-item>
+                <mat-list-item
+                  role="listitem"
+                  class="text-decoration-line-through text-danger"
+                  class="fit"
+                  ><p class="text-danger">კვების ობიექტის სალაროს მოდული</p>
+                </mat-list-item>
+                <mat-list-item role="listitem"
+                  ><p>შესყიდვები RS-ს მეშვეობით</p>
+                </mat-list-item>
+                <mat-list-item role="listitem"
+                  ><p>დაბრუნება RS-ს მეშვეობით</p>
+                </mat-list-item>
+                <mat-list-item role="listitem"
+                  ><p>პროდუქციის ჩამოწერა</p>
+                </mat-list-item>
+                <mat-list-item role="listitem"
+                  ><p>სალაროს მართვა</p>
+                </mat-list-item>
+                <mat-list-item role="listitem"
+                  ><p>ნაშთების მართვა</p>
+                </mat-list-item>
+                <mat-list-item
+                  role="listitem"
+                  class="text-decoration-line-through"
+                  ><p class="text-danger">საწყობების მართვა</p>
+                </mat-list-item>
+                <mat-list-item role="listitem"
+                  ><p>კატეგორიების მართვა</p>
+                </mat-list-item>
+                <mat-list-item role="listitem"
+                  ><p>დავალიანებების მართვა</p>
+                </mat-list-item>
+                <mat-list-item
+                  role="listitem"
+                  class="text-decoration-line-through"
+                  ><p class="text-danger">ხელშეკრულებების მართვა</p>
+                </mat-list-item>
+                <mat-list-item
+                  role="listitem"
+                  class="text-decoration-line-through fit"
+                  ><p class="text-danger">
+                    გადაადგილება საწყობებს შორის
+                  </p></mat-list-item
+                >
+                <mat-list-item role="listitem" class="fit">
+                  <p>პერსონალის მონაცემების მართვა</p>
+                </mat-list-item>
+                <mat-list-item role="listitem" class="fit">
+                  <p>პერსონალის ფუნქციონალის მართვა</p>
+                </mat-list-item>
+              </mat-list>
+            </mat-expansion-panel>
+
+            <mat-expansion-panel
+              class="m-3"
+              (opened)="panelOpenState = true"
+              (closed)="panelOpenState = false"
+            >
+              <mat-expansion-panel-header>
+                <mat-panel-title> ინვენტარიზაცია </mat-panel-title>
+              </mat-expansion-panel-header>
+              <mat-list role="list">
+                <mat-list-item role="listitem">
+                  <p>ინვენტარიზაცია ჯგუფით</p>
+                </mat-list-item>
+                <mat-list-item role="listitem" class="fit"
+                  ><p>ინვენტარიზაცია მომწოდებლით</p>
+                </mat-list-item>
+                <mat-list-item role="listitem" class="fit">
+                  <p>ინვენტარიზაცია შედგენილი სიით</p>
+                </mat-list-item>
+                <mat-list-item
+                  role="listitem"
+                  class="text-decoration-line-through fit"
+                >
+                  <p class="text-danger">ინვენტარიზაციის Android მოდული</p>
+                </mat-list-item>
+              </mat-list>
+            </mat-expansion-panel>
+
+            <mat-expansion-panel
+              class="m-3"
+              (opened)="panelOpenState = true"
+              (closed)="panelOpenState = false"
+            >
+              <mat-expansion-panel-header>
+                <mat-panel-title> დამხმარე მოდულები </mat-panel-title>
+              </mat-expansion-panel-header>
+              <mat-list role="list">
+                <mat-list-item
+                  role="listitem"
+                  class="text-decoration-line-through"
+                >
+                  <p class="text-danger">სალაროს წიგნი</p>
+                </mat-list-item>
+                <mat-list-item role="listitem">
+                  <p>აქციების მართვა</p>
+                </mat-list-item>
+                <mat-list-item role="listitem"
+                  ><p>ავტომატური ბექაფი</p>
+                </mat-list-item>
+                <mat-list-item role="listitem">
+                  <p>დაგროვების მოდული</p>
+                </mat-list-item>
+                <mat-list-item role="listitem">
+                  <p>ლოიალობის მოდული</p>
+                </mat-list-item>
+                <mat-list-item role="listitem">
+                  <p>ავტონომიური სალარო</p>
+                </mat-list-item>
+                <mat-list-item role="listitem">
+                  <p>ავტომატური შეკვეთები</p>
+                </mat-list-item>
+                <mat-list-item role="listitem">
+                  <p>კალკულაცია და წარმოება</p>
+                </mat-list-item>
+                <mat-list-item role="listitem">
+                  <p>პროდუქციის კონვერტაცია</p>
+                </mat-list-item>
+                <mat-list-item role="listitem">
+                  <p>საათობრივი ფასდაკლებები</p>
+                </mat-list-item>
+              </mat-list>
+            </mat-expansion-panel>
+
+            <mat-expansion-panel
+              class="m-3"
+              (opened)="panelOpenState = true"
+              (closed)="panelOpenState = false"
+            >
+              <mat-expansion-panel-header>
+                <mat-panel-title> რეპორტები </mat-panel-title>
+              </mat-expansion-panel-header>
+              <mat-list role="list">
+                <mat-list-item role="listitem">
+                  <p>შესყიდვების რეპორტები</p>
+                </mat-list-item>
+                <mat-list-item role="listitem"
+                  ><p>რეალიზაციის რეპორტები</p>
+                </mat-list-item>
+                <mat-list-item role="listitem">
+                  <p>საქონლის მოძრაობის რეპორტი</p>
+                </mat-list-item>
+                <mat-list-item role="listitem">
+                  <p>რეალიზაციები ზედნადებით</p>
+                </mat-list-item>
+              </mat-list>
+            </mat-expansion-panel>
+            <mat-expansion-panel
+              class="m-3"
+              (opened)="panelOpenState = true"
+              (closed)="panelOpenState = false"
+            >
+              <mat-expansion-panel-header>
+                <mat-panel-title> ინტეგრაცია </mat-panel-title>
+              </mat-expansion-panel-header>
+              <mat-list role="list">
+                <mat-list-item role="listitem">
+                  <p>BOG იმპორტი (xlsx)</p>
+                </mat-list-item>
+                <mat-list-item role="listitem"
+                  ><p>TBC იმპორტი (xlsx)</p>
+                </mat-list-item>
+                <mat-list-item role="listitem">
+                  <p>TBC იმპორტი (ინტეგრაცია)</p>
+                </mat-list-item>
+                <mat-list-item role="listitem" class="fit">
+                  <p>სალარო აპარატების ინტეგრაცია</p>
+                </mat-list-item>
+                <mat-list-item role="listitem" class="fit">
+                  <p>საბანკო ტერმინალის ინტეგრაცია</p>
+                </mat-list-item>
+                <mat-list-item
+                  role="listitem"
+                  class="text-decoration-line-through"
+                  class="fit"
+                >
+                  <p class="text-danger">ჭკვიანი სასწორების ინტეგრაცია</p>
+                </mat-list-item>
+                <mat-list-item role="listitem" class="fit">
+                  <p>შტრიხკოდის სკანერის ინტეგრაცია</p>
+                </mat-list-item>
+                <mat-list-item role="listitem" class="fit">
+                  <p>ჩამონათვალის პრინტერის ინტეგრაცია</p>
+                </mat-list-item>
+              </mat-list>
+            </mat-expansion-panel>
+            <div>
+              <h2 class="fs-4">ნომენკლატურის რაოდენობა</h2>
+              <p class="text-success fw-bold">1500</p>
+              <button type="button" class="btn btn-danger">შეუკვეთე</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div></div>
+</div>
