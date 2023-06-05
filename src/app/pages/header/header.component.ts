@@ -6,7 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent {
-  onScroll(event: any) {
-    console.log(event);
+  menu: boolean = true;
+
+  onClick() {
+    this.menu = !this.menu;
   }
 }

@@ -15,9 +15,10 @@
             <h1 class="fw-bold p-2">150ლ</h1>
             <p class="card-text">დამატებითი ლიცენზია 50₾</p>
             <mat-expansion-panel
+              [expanded]="compare"
               class="m-3"
-              (opened)="panelOpenState = true"
-              (closed)="panelOpenState = false"
+              (opened)="compare = true"
+              (closed)="compare = false"
             >
               <mat-expansion-panel-header>
                 <mat-panel-title> ძირითადი მოდულები </mat-panel-title>
@@ -69,9 +70,10 @@
             </mat-expansion-panel>
 
             <mat-expansion-panel
+              [expanded]="compare2"
               class="m-3"
-              (opened)="panelOpenState = true"
-              (closed)="panelOpenState = false"
+              (opened)="compare2 = true"
+              (closed)="compare2 = false"
             >
               <mat-expansion-panel-header>
                 <mat-panel-title> ინვენტარიზაცია </mat-panel-title>
@@ -94,8 +96,9 @@
 
             <mat-expansion-panel
               class="m-3"
-              (opened)="panelOpenState = true"
-              (closed)="panelOpenState = false"
+              [expanded]="compare3"
+              (opened)="compare3 = true"
+              (closed)="compare3 = false"
             >
               <mat-expansion-panel-header>
                 <mat-panel-title> დამხმარე მოდულები </mat-panel-title>
@@ -135,9 +138,10 @@
             </mat-expansion-panel>
 
             <mat-expansion-panel
+              [expanded]="compare4"
               class="m-3"
-              (opened)="panelOpenState = true"
-              (closed)="panelOpenState = false"
+              (opened)="compare4 = true"
+              (closed)="compare4 = false"
             >
               <mat-expansion-panel-header>
                 <mat-panel-title> რეპორტები </mat-panel-title>
@@ -159,9 +163,10 @@
             </mat-expansion-panel>
 
             <mat-expansion-panel
+              [expanded]="compare5"
               class="m-3"
-              (opened)="panelOpenState = true"
-              (closed)="panelOpenState = false"
+              (opened)="compare5 = true"
+              (closed)="compare5 = false"
             >
               <mat-expansion-panel-header>
                 <mat-panel-title> ინტეგრაცია </mat-panel-title>
@@ -208,9 +213,10 @@
             <h1 class="fw-bold p-2">118ლ</h1>
             <p class="card-text">დამატებითი ლიცენზია 50₾</p>
             <mat-expansion-panel
+              [expanded]="compare"
               class="m-3"
-              (opened)="panelOpenState = true"
-              (closed)="panelOpenState = false"
+              (opened)="compare= true"
+              (closed)="compare = false"
             >
               <mat-expansion-panel-header>
                 <mat-panel-title> ძირითადი მოდულები </mat-panel-title>
@@ -272,9 +278,10 @@
             </mat-expansion-panel>
 
             <mat-expansion-panel
+              [expanded]="compare2"
               class="m-3"
-              (opened)="panelOpenState = true"
-              (closed)="panelOpenState = false"
+              (opened)="compare2 = true"
+              (closed)="compare2 = false"
             >
               <mat-expansion-panel-header>
                 <mat-panel-title> ინვენტარიზაცია </mat-panel-title>
@@ -296,9 +303,10 @@
             </mat-expansion-panel>
 
             <mat-expansion-panel
+              [expanded]="compare3"
               class="m-3"
-              (opened)="panelOpenState = true"
-              (closed)="panelOpenState = false"
+              (opened)="compare3 = true"
+              (closed)="compare3 = false"
             >
               <mat-expansion-panel-header>
                 <mat-panel-title> დამხმარე მოდულები </mat-panel-title>
@@ -341,9 +349,10 @@
             </mat-expansion-panel>
 
             <mat-expansion-panel
+              [expanded]="compare4"
               class="m-3"
-              (opened)="panelOpenState = true"
-              (closed)="panelOpenState = false"
+              (opened)="compare4 = true"
+              (closed)="compare4 = false"
             >
               <mat-expansion-panel-header>
                 <mat-panel-title> რეპორტები </mat-panel-title>
@@ -365,9 +374,10 @@
             </mat-expansion-panel>
 
             <mat-expansion-panel
+              [expanded]="compare5"
               class="m-3"
-              (opened)="panelOpenState = true"
-              (closed)="panelOpenState = false"
+              (opened)="compare5 = true"
+              (closed)="compare5 = false"
             >
               <mat-expansion-panel-header>
                 <mat-panel-title> ინტეგრაცია </mat-panel-title>
@@ -414,9 +424,10 @@
             <h1 class="fw-bold p-2">50ლ</h1>
             <p class="card-text">დამატებითი ლიცენზია 50₾</p>
             <mat-expansion-panel
+              [expanded]="compare"
               class="m-3"
-              (opened)="panelOpenState = true"
-              (closed)="panelOpenState = false"
+              (opened)="compare = true"
+              (closed)="compare = false"
             >
               <mat-expansion-panel-header>
                 <mat-panel-title> ძირითადი მოდულები </mat-panel-title>
@@ -429,7 +440,7 @@
                   role="listitem"
                   class="text-decoration-line-through text-danger"
                   class="fit"
-                  ><p class="text-danger">კვების ობიექტის სალაროს მოდული</p>
+                  ><p class="text-danger text-decoration-line-through">კვების ობიექტის სალაროს მოდული</p>
                 </mat-list-item>
                 <mat-list-item role="listitem"
                   ><p>შესყიდვები RS-ს მეშვეობით</p>
@@ -479,9 +490,10 @@
             </mat-expansion-panel>
 
             <mat-expansion-panel
+              [expanded]="compare2"
               class="m-3"
-              (opened)="panelOpenState = true"
-              (closed)="panelOpenState = false"
+              (opened)="compare2 = true"
+              (closed)="compare2 = false"
             >
               <mat-expansion-panel-header>
                 <mat-panel-title> ინვენტარიზაცია </mat-panel-title>
@@ -506,9 +518,10 @@
             </mat-expansion-panel>
 
             <mat-expansion-panel
+              [expanded]="compare3"
               class="m-3"
-              (opened)="panelOpenState = true"
-              (closed)="panelOpenState = false"
+              (opened)="compare3 = true"
+              (closed)="compare3 = false"
             >
               <mat-expansion-panel-header>
                 <mat-panel-title> დამხმარე მოდულები </mat-panel-title>
@@ -551,9 +564,10 @@
             </mat-expansion-panel>
 
             <mat-expansion-panel
+              [expanded]="compare4"
               class="m-3"
-              (opened)="panelOpenState = true"
-              (closed)="panelOpenState = false"
+              (opened)="compare4 = true"
+              (closed)="compare4 = false"
             >
               <mat-expansion-panel-header>
                 <mat-panel-title> რეპორტები </mat-panel-title>
@@ -573,10 +587,12 @@
                 </mat-list-item>
               </mat-list>
             </mat-expansion-panel>
+
             <mat-expansion-panel
+              [expanded]="compare5"
               class="m-3"
-              (opened)="panelOpenState = true"
-              (closed)="panelOpenState = false"
+              (opened)="compare5 = true"
+              (closed)="compare5 = false"
             >
               <mat-expansion-panel-header>
                 <mat-panel-title> ინტეგრაცია </mat-panel-title>

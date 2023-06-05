@@ -5,6 +5,8 @@ import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { HomeModule } from './home/home.module';
 import { PagesComponent } from './pages.component';
+import { ContactPageComponent } from './contact-page/contact-page.component';
+import { BlogPageComponent } from './blog-page/blog-page.component';
 
 const routes: Routes = [
   {
@@ -18,6 +20,15 @@ const routes: Routes = [
           import('./home/home.module').then((m) => m.HomeModule),
       },
     ],
+  },
+
+  {
+    path: 'contact',
+    component: ContactPageComponent,
+  },
+  {
+    path: 'blog',
+    component: BlogPageComponent,
   },
 ];
 

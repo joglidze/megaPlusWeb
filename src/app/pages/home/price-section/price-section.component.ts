@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class PriceSectionComponent {
   panelOpenState?: boolean;
+  compare?: boolean;
+  compare2?: boolean;
+  compare3?: boolean;
+  compare4?: boolean;
+  compare5?: boolean;
 }

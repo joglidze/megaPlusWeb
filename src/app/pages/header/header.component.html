@@ -1,21 +1,43 @@
-<nav class="navbar navbar-expand-lg fs-5 fixed-top bg-pink ">
-  <div class="container m-auto p-2" (scroll)="onScroll($event)">
-    <a class="navbar-brand" href="#"
+<nav class="navbar navbar-expand-lg fs-5 bg-pink">
+  <div class="container m-auto p-2">
+    <a class="navbar-brand" routerLink="/home"
       ><img src="/assets/images/LOGO3-1.png" alt="logo" width="100px"
     /></a>
-    <button class="navbar-toggler" type="button">
+    <button class="navbar-toggler" type="button" [matMenuTriggerFor]="menu">
       <span class="navbar-toggler-icon"></span>
     </button>
+    <mat-menu #menu="matMenu" class="w-100 d-block" yPosition="above">
+  <button mat-menu-item>
+    <mat-icon>dialpad</mat-icon>
+    <span>Redial</span>
+  </button>
+  <button mat-menu-item disabled>
+    <mat-icon>voicemail</mat-icon>
+    <span>Check voice mail</span>
+  </button>
+  <button mat-menu-item>
+    <mat-icon>notifications_off</mat-icon>
+    <span>Disable alerts</span>
+  </button>
+</mat-menu>
+
+    <ng-container *ngIf="" #dropdown>
+      <h1>test</h1>
+    </ng-container>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item m-1">
-          <a class="nav-link active text-secondary" href="#">მთავარი</a>
+          <a class="nav-link active text-secondary" routerLink="/home"
+            >მთავარი</a
+          >
         </li>
         <li class="nav-item m-1">
-          <a class="nav-link active text-secondary" href="#">ბლოგი</a>
+          <a class="nav-link active text-secondary" routerLink="/blog">ბლოგი</a>
         </li>
         <li class="nav-item m-1">
-          <a class="nav-link active text-secondary" href="#">კონტაქტი</a>
+          <a class="nav-link active text-secondary" routerLink="/contact"
+            >კონტაქტი</a
+          >
         </li>
       </ul>
     </div>
