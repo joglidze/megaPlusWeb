@@ -11,7 +11,7 @@ import { BlogPageComponent } from './blog-page/blog-page.component';
 const routes: Routes = [
   {
     path: 'home',
-    component: PagesComponent,
+
     children: [
       {
         path: '',
