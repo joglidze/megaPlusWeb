@@ -11,7 +11,9 @@ import { FooterComponent } from './footer/footer.component';
 import { ContactPageComponent } from './contact-page/contact-page.component';
 import { BlogPageComponent } from './blog-page/blog-page.component';
 import { MatMenuModule } from '@angular/material/menu';
-
+import { TranslationnModule } from '../translationn/translationn.module';
+import { MatSelectModule } from '@angular/material/select';
+import {MatButtonModule} from '@angular/material/button';
 @NgModule({
   declarations: [
     PagesComponent,
@@ -26,6 +28,10 @@ import { MatMenuModule } from '@angular/material/menu';
     HomeModule,
     MatIconModule,
     MatMenuModule,
+    MatSelectModule,
+    
+    TranslationnModule,
+    MatButtonModule,
   ],
 })
 export class PagesModule {}
