@@ -13,7 +13,9 @@ import { BlogPageComponent } from './blog-page/blog-page.component';
 import { MatMenuModule } from '@angular/material/menu';
 import { TranslationnModule } from '../translationn/translationn.module';
 import { MatSelectModule } from '@angular/material/select';
-import {MatButtonModule} from '@angular/material/button';
+import { MatButtonModule } from '@angular/material/button';
+import { SharedModule } from '../shared/shared.module';
+
 @NgModule({
   declarations: [
     PagesComponent,
@@ -21,6 +23,7 @@ import {MatButtonModule} from '@angular/material/button';
     FooterComponent,
     ContactPageComponent,
     BlogPageComponent,
+    
   ],
   imports: [
     CommonModule,
@@ -29,7 +32,7 @@ import {MatButtonModule} from '@angular/material/button';
     MatIconModule,
     MatMenuModule,
     MatSelectModule,
-    
+    SharedModule,
     TranslationnModule,
     MatButtonModule,
   ],

@@ -2,6 +2,8 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { TranslateService } from '@ngx-translate/core';
+import { TranslationService } from 'src/app/core/translation.service';
+import { TranslateMainPipe } from 'src/app/shared/translate-main.pipe';
 
 @Component({
   selector: 'app-header',
@@ -11,24 +13,16 @@ import { TranslateService } from '@ngx-translate/core';
 export class HeaderComponent implements OnInit {
   menu: boolean = true;
   navbar: any;
-  constructor(
-    private translateService: TranslateService,
-    private http: HttpClient
-  ) {}
+  constructor(private translationService: TranslationService) {}
 
   ngOnInit(): void {
-    this.http.get<any[]>('./assets/i18n/en.json').subscribe((res) => {
-      console.log(res);
-      this.navbar = res;
-    });
+    this.switchLanguage('ge');
   }
   onClick() {
     this.menu = !this.menu;
   }
 
   switchLanguage(lang: any) {
-    console.log(lang);
-    console.log(this.navbar);
-    return this.translateService.use(lang);
+    return this.translationService.setLanguage(lang);
   }
 }

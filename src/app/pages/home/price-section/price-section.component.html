@@ -3,20 +3,25 @@
 </div>
 <div class="text-center main-cont p-5">
   <div class="">
-    <h1 class="fw-bold fs-2">ფასები</h1>
+    <h1 class="fw-bold fs-2">{{ "price" | translateMain | uppercase }}</h1>
     <h1 class="fs-5">
-      ფასი არის ყოველთვიური და მოიცავს მომსახურებასაც თანხები მოცემულია დღგ-ს
-      ჩათვლით
+      {{ "priceParagraph" | translateMain }}
     </h1>
   </div>
   <div class="container">
     <div class="row w-100">
       <div class="col-lg-4">
         <div class="card text-center">
-          <div class="card-header"><h1 class="mb-0 fw-bold">სუპერი</h1></div>
+          <div class="card-header">
+            <h1 class="mb-0 fw-bold">
+              {{ "priceSuperHeader" | translateMain }}
+            </h1>
+          </div>
           <div class="card-body">
-            <h1 class="fw-bold p-2">150ლ</h1>
-            <p class="card-text">დამატებითი ლიცენზია 50₾</p>
+            <h1 class="fw-bold p-2">{{ "PriceSuper" | translateMain }}</h1>
+            <p class="card-text">
+              {{ "licenseParagraphHeader" | translateMain }}
+            </p>
             <mat-expansion-panel
               [expanded]="compare"
               class="m-3"
@@ -24,50 +29,54 @@
               (closed)="compare = false"
             >
               <mat-expansion-panel-header>
-                <mat-panel-title> ძირითადი მოდულები </mat-panel-title>
+                <mat-panel-title
+                  >{{ "BasicModules" | translateMain }}
+                </mat-panel-title>
               </mat-expansion-panel-header>
               <mat-list role="list">
-                <mat-list-item class="fit">
-                  <p>სტანდარტული სალაროს მოდული</p>
+                <mat-list-item class="text-center">
+                  <p>{{ "StandardCheckoutModule" | translateMain }}</p>
                 </mat-list-item>
-                <mat-list-item role="listitem" class="fit"
-                  ><p>კვების ობიექტის სალაროს მოდული</p>
-                </mat-list-item>
-                <mat-list-item role="listitem"
-                  ><p>შესყიდვები RS-ს მეშვეობით</p>
+                <mat-list-item role="listitem" class="text-center"
+                  ><p>{{ "Cashregister" | translateMain }}</p>
                 </mat-list-item>
                 <mat-list-item role="listitem"
-                  ><p>დაბრუნება RS-ს მეშვეობით</p>
+                  ><p>{{ "PurchasesThroughRS" | translateMain }}</p>
                 </mat-list-item>
                 <mat-list-item role="listitem"
-                  ><p>პროდუქციის ჩამოწერა</p>
+                  ><p>{{ "ReturnviaRS" | translateMain }}</p>
                 </mat-list-item>
                 <mat-list-item role="listitem"
-                  ><p>სალაროს მართვა</p>
+                  ><p>{{ "WriteOffProducts" | translateMain }}</p>
                 </mat-list-item>
                 <mat-list-item role="listitem"
-                  ><p>ნაშთების მართვა</p>
+                  ><p>{{ "cashRegisterManagement" | translateMain }}</p>
                 </mat-list-item>
                 <mat-list-item role="listitem"
-                  ><p>საწყობების მართვა</p>
+                  ><p>{{ "balanceManagement" | translateMain }}</p>
                 </mat-list-item>
                 <mat-list-item role="listitem"
-                  ><p>კატეგორიების მართვა</p>
+                  ><p>{{ "ManagementOfWarehouses" | translateMain }}</p>
                 </mat-list-item>
                 <mat-list-item role="listitem"
-                  ><p>დავალიანებების მართვა</p>
+                  ><p>{{ "ManageCategories" | translateMain }}</p>
                 </mat-list-item>
                 <mat-list-item role="listitem"
-                  ><p>ხელშეკრულებების მართვა</p>
+                  ><p>{{ "debtmanagement" | translateMain }}</p>
                 </mat-list-item>
                 <mat-list-item role="listitem"
-                  ><p>გადაადგილება საწყობებს შორის</p>
+                  ><p>{{ "ManagementOfContracts" | translateMain }}</p>
                 </mat-list-item>
-                <mat-list-item role="listitem" class="fit">
-                  <p>პერსონალის მონაცემების მართვა</p>
+                <mat-list-item role="listitem"
+                  ><p>{{ "MoveBetweenWarehouses" | translateMain }}</p>
                 </mat-list-item>
-                <mat-list-item role="listitem" class="fit">
-                  <p>პერსონალის ფუნქციონალის მართვა</p>
+                <mat-list-item role="listitem" class="text-center">
+                  <p>{{ "ManagementOfPersonnelData" | translateMain }}</p>
+                </mat-list-item>
+                <mat-list-item role="listitem" class="text-center">
+                  <p>
+                    {{ "ManagementOfPersonnelFunctionality" | translateMain }}
+                  </p>
                 </mat-list-item>
               </mat-list>
             </mat-expansion-panel>
@@ -79,20 +88,22 @@
               (closed)="compare2 = false"
             >
               <mat-expansion-panel-header>
-                <mat-panel-title> ინვენტარიზაცია </mat-panel-title>
+                <mat-panel-title>
+                  {{ "Inventory" | translateMain }}</mat-panel-title
+                >
               </mat-expansion-panel-header>
               <mat-list role="list">
                 <mat-list-item role="listitem">
-                  <p>ინვენტარიზაცია ჯგუფით</p>
+                  <p>{{ "InventoryByGroup" | translateMain }}</p>
                 </mat-list-item>
                 <mat-list-item role="listitem"
-                  ><p>ინვენტარიზაცია მომწოდებლით</p>
+                  ><p>{{ "InventoryBySupplier" | translateMain }}</p>
                 </mat-list-item>
-                <mat-list-item role="listitem" class="fit">
-                  <p>ინვენტარიზაცია შედგენილი სიით</p>
+                <mat-list-item role="listitem" class="text-center">
+                  <p>{{ "InventoryWithCompiledList" | translateMain }}</p>
                 </mat-list-item>
-                <mat-list-item role="listitem" class="fit">
-                  <p>ინვენტარიზაციის Android მოდული</p>
+                <mat-list-item role="listitem" class="text-center">
+                  <p>{{ "Inventory Android module" | translateMain }}</p>
                 </mat-list-item>
               </mat-list>
             </mat-expansion-panel>
@@ -104,38 +115,40 @@
               (closed)="compare3 = false"
             >
               <mat-expansion-panel-header>
-                <mat-panel-title> დამხმარე მოდულები </mat-panel-title>
+                <mat-panel-title
+                  >{{ "SupportModules" | translateMain }}
+                </mat-panel-title>
               </mat-expansion-panel-header>
               <mat-list role="list">
                 <mat-list-item role="listitem">
-                  <p>სალაროს წიგნი</p>
+                  <p>{{ "CashBook" | translateMain }}</p>
                 </mat-list-item>
                 <mat-list-item role="listitem">
-                  <p>აქციების მართვა</p>
+                  <p>{{ "StockManagement" | translateMain }}</p>
                 </mat-list-item>
                 <mat-list-item role="listitem"
-                  ><p>ავტომატური ბექაფი</p>
+                  ><p>{{ "AutomaticBackup" | translateMain }}</p>
                 </mat-list-item>
                 <mat-list-item role="listitem">
-                  <p>დაგროვების მოდული</p>
+                  <p>{{ "accumulationModule" | translateMain }}</p>
                 </mat-list-item>
                 <mat-list-item role="listitem">
-                  <p>ლოიალობის მოდული</p>
+                  <p>{{ "LoyaltyModule" | translateMain }}</p>
                 </mat-list-item>
                 <mat-list-item role="listitem">
-                  <p>ავტონომიური სალარო</p>
+                  <p>{{ "AutonomousCashRegister" | translateMain }}</p>
                 </mat-list-item>
                 <mat-list-item role="listitem">
-                  <p>ავტომატური შეკვეთები</p>
+                  <p>{{ "AutomaticOrders" | translateMain }}</p>
                 </mat-list-item>
                 <mat-list-item role="listitem">
-                  <p>კალკულაცია და წარმოება</p>
+                  <p>{{ "CalculationAndProduction" | translateMain }}</p>
                 </mat-list-item>
                 <mat-list-item role="listitem">
-                  <p>პროდუქციის კონვერტაცია</p>
+                  <p>{{ "ProductConversion" | translateMain }}</p>
                 </mat-list-item>
                 <mat-list-item role="listitem">
-                  <p>საათობრივი ფასდაკლებები</p>
+                  <p>{{ "HourlyDiscounts" | translateMain }}</p>
                 </mat-list-item>
               </mat-list>
             </mat-expansion-panel>
@@ -147,20 +160,22 @@
               (closed)="compare4 = false"
             >
               <mat-expansion-panel-header>
-                <mat-panel-title> რეპორტები </mat-panel-title>
+                <mat-panel-title
+                  >{{ "reports" | translateMain }}
+                </mat-panel-title>
               </mat-expansion-panel-header>
               <mat-list role="list">
                 <mat-list-item role="listitem">
-                  <p>შესყიდვების რეპორტები</p>
+                  <p>{{ "PurchaseReports" | translateMain }}</p>
                 </mat-list-item>
                 <mat-list-item role="listitem"
-                  ><p>რეალიზაციის რეპორტები</p>
+                  ><p>{{ "RealizationReports" | translateMain }}</p>
                 </mat-list-item>
                 <mat-list-item role="listitem">
-                  <p>საქონლის მოძრაობის რეპორტი</p>
+                  <p>{{ "GoodsMovementReport" | translateMain }}</p>
                 </mat-list-item>
                 <mat-list-item role="listitem">
-                  <p>რეალიზაციები ზედნადებით</p>
+                  <p>{{ "RealizationsWith" | translateMain }}</p>
                 </mat-list-item>
               </mat-list>
             </mat-expansion-panel>
@@ -172,49 +187,63 @@
               (closed)="compare5 = false"
             >
               <mat-expansion-panel-header>
-                <mat-panel-title> ინტეგრაცია </mat-panel-title>
+                <mat-panel-title>
+                  {{ "integration" | translateMain }}
+                </mat-panel-title>
               </mat-expansion-panel-header>
               <mat-list role="list">
                 <mat-list-item role="listitem">
-                  <p>BOG იმპორტი (xlsx)</p>
+                  <p>{{ "BOG" | translateMain }}</p>
                 </mat-list-item>
                 <mat-list-item role="listitem"
-                  ><p>TBC იმპორტი (xlsx)</p>
+                  ><p>{{ "TBC" | translateMain }}</p>
                 </mat-list-item>
                 <mat-list-item role="listitem">
-                  <p>TBC იმპორტი (ინტეგრაცია)</p>
+                  <p>{{ "TBC Import" | translateMain }}</p>
                 </mat-list-item>
                 <mat-list-item role="listitem">
-                  <p>სალარო აპარატების ინტეგრაცია</p>
+                  <p>{{ "IntegrationOfCashRegisters" | translateMain }}</p>
                 </mat-list-item>
                 <mat-list-item role="listitem">
-                  <p>საბანკო ტერმინალის ინტეგრაცია</p>
+                  <p>{{ "BankTerminalIntegration" | translateMain }}</p>
                 </mat-list-item>
                 <mat-list-item role="listitem">
-                  <p>ჭკვიანი სასწორების ინტეგრაცია</p>
+                  <p>{{ "IntegrationOfSmartScales" | translateMain }}</p>
                 </mat-list-item>
-                <mat-list-item role="listitem" class="fit">
-                  <p>შტრიხკოდის სკანერის ინტეგრაცია</p>
+                <mat-list-item role="listitem" class="text-center">
+                  <p>{{ "BarcodeScannerIntegration" | translateMain }}</p>
                 </mat-list-item>
-                <mat-list-item role="listitem" class="fit">
-                  <p>ჩამონათვალის პრინტერის ინტეგრაცია</p>
+                <mat-list-item role="listitem" class="text-center">
+                  <p>{{ "ListPrinterIntegration" | translateMain }}</p>
                 </mat-list-item>
               </mat-list>
             </mat-expansion-panel>
             <div>
-              <h2 class="fs-4">ნომენკლატურის რაოდენობა</h2>
-              <p class="text-success fw-bold">შეუზღუდავი</p>
-              <button type="button" class="btn btn-danger">შეუკვეთე</button>
+              <h2 class="fs-4">
+                {{ "NumberOfNomenclature" | translateMain }}
+              </h2>
+              <p class="text-success fw-bold">
+                {{ "unlimited" | translateMain }}
+              </p>
+              <button type="button" class="btn btn-danger">
+                {{ "orderButton" | translateMain }}
+              </button>
             </div>
           </div>
         </div>
       </div>
       <div class="col-lg-4">
         <div class="card text-center m-2">
-          <div class="card-header"><h1 class="mb-0 fw-bold">ექსტრა</h1></div>
+          <div class="card-header">
+            <h1 class="mb-0 fw-bold">
+              {{ "priceExtraHeader" | translateMain }}
+            </h1>
+          </div>
           <div class="card-body">
-            <h1 class="fw-bold p-2">118ლ</h1>
-            <p class="card-text">დამატებითი ლიცენზია 50₾</p>
+            <h1 class="fw-bold p-2">{{ "priceExtra" | translateMain }}</h1>
+            <p class="card-text">
+              {{ "licenseParagraphHeader" | translateMain }}
+            </p>
             <mat-expansion-panel
               [expanded]="compare"
               class="m-3"
@@ -222,274 +251,70 @@
               (closed)="compare = false"
             >
               <mat-expansion-panel-header>
-                <mat-panel-title> ძირითადი მოდულები </mat-panel-title>
+                <mat-panel-title
+                  >{{ "BasicModules" | translateMain }}
+                </mat-panel-title>
               </mat-expansion-panel-header>
               <mat-list role="list">
-                <mat-list-item class="fit"
-                  ><p>სტანდარტული სალაროს მოდული</p>
-                </mat-list-item>
-                <mat-list-item
-                  role="listitem"
-                  class="text-decoration-line-through text-danger fit"
-                  ><p class="text-danger">კვების ობიექტის სალაროს მოდული</p>
-                </mat-list-item>
-                <mat-list-item role="listitem" class="fit"
-                  ><p>შესყიდვები RS-ს მეშვეობით</p>
-                </mat-list-item>
-                <mat-list-item role="listitem"
-                  ><p>დაბრუნება RS-ს მეშვეობით</p>
-                </mat-list-item>
-                <mat-list-item role="listitem"
-                  ><p>პროდუქციის ჩამოწერა</p>
-                </mat-list-item>
-                <mat-list-item role="listitem"
-                  ><p>სალაროს მართვა</p>
-                </mat-list-item>
-                <mat-list-item role="listitem"
-                  ><p>ნაშთების მართვა</p>
-                </mat-list-item>
-                <mat-list-item
-                  role="listitem"
-                  class="text-decoration-line-through"
-                  ><p class="text-danger">საწყობების მართვა</p>
-                </mat-list-item>
-                <mat-list-item role="listitem"
-                  ><p>კატეგორიების მართვა</p>
-                </mat-list-item>
-                <mat-list-item role="listitem"
-                  ><p>დავალიანებების მართვა</p>
-                </mat-list-item>
-                <mat-list-item
-                  role="listitem"
-                  class="text-decoration-line-through"
-                  ><p class="text-danger">ხელშეკრულებების მართვა</p>
-                </mat-list-item>
-                <mat-list-item
-                  role="listitem"
-                  class="text-decoration-line-through fit"
-                  ><p class="text-danger">
-                    გადაადგილება საწყობებს შორის
-                  </p></mat-list-item
-                >
-                <mat-list-item role="listitem" class="fit">
-                  <p>პერსონალის მონაცემების მართვა</p>
-                </mat-list-item>
-                <mat-list-item role="listitem" class="fit">
-                  <p>პერსონალის ფუნქციონალის მართვა</p>
-                </mat-list-item>
-              </mat-list>
-            </mat-expansion-panel>
-
-            <mat-expansion-panel
-              [expanded]="compare2"
-              class="m-3"
-              (opened)="compare2 = true"
-              (closed)="compare2 = false"
-            >
-              <mat-expansion-panel-header>
-                <mat-panel-title> ინვენტარიზაცია </mat-panel-title>
-              </mat-expansion-panel-header>
-              <mat-list role="list">
-                <mat-list-item role="listitem">
-                  <p>ინვენტარიზაცია ჯგუფით</p>
-                </mat-list-item>
-                <mat-list-item role="listitem" class="fit"
-                  ><p>ინვენტარიზაცია მომწოდებლით</p>
-                </mat-list-item>
-                <mat-list-item role="listitem" class="fit">
-                  <p>ინვენტარიზაცია შედგენილი სიით</p>
-                </mat-list-item>
-                <mat-list-item role="listitem" class="fit">
-                  <p>ინვენტარიზაციის Android მოდული</p>
-                </mat-list-item>
-              </mat-list>
-            </mat-expansion-panel>
-
-            <mat-expansion-panel
-              [expanded]="compare3"
-              class="m-3"
-              (opened)="compare3 = true"
-              (closed)="compare3 = false"
-            >
-              <mat-expansion-panel-header>
-                <mat-panel-title> დამხმარე მოდულები </mat-panel-title>
-              </mat-expansion-panel-header>
-              <mat-list role="list">
-                <mat-list-item role="listitem">
-                  <p>სალაროს წიგნი</p>
-                </mat-list-item>
-                <mat-list-item role="listitem">
-                  <p>აქციების მართვა</p>
-                </mat-list-item>
-                <mat-list-item role="listitem"
-                  ><p>ავტომატური ბექაფი</p>
-                </mat-list-item>
-                <mat-list-item role="listitem">
-                  <p>დაგროვების მოდული</p>
-                </mat-list-item>
-                <mat-list-item role="listitem">
-                  <p>ლოიალობის მოდული</p>
-                </mat-list-item>
-                <mat-list-item role="listitem">
-                  <p>ავტონომიური სალარო</p>
-                </mat-list-item>
-                <mat-list-item role="listitem">
-                  <p>ავტომატური შეკვეთები</p>
-                </mat-list-item>
-                <mat-list-item
-                  role="listitem"
-                  class="text-decoration-line-through"
-                >
-                  <p class="text-danger">კალკულაცია და წარმოება</p>
-                </mat-list-item>
-                <mat-list-item role="listitem">
-                  <p>პროდუქციის კონვერტაცია</p>
-                </mat-list-item>
-                <mat-list-item role="listitem">
-                  <p>საათობრივი ფასდაკლებები</p>
-                </mat-list-item>
-              </mat-list>
-            </mat-expansion-panel>
-
-            <mat-expansion-panel
-              [expanded]="compare4"
-              class="m-3"
-              (opened)="compare4 = true"
-              (closed)="compare4 = false"
-            >
-              <mat-expansion-panel-header>
-                <mat-panel-title> რეპორტები </mat-panel-title>
-              </mat-expansion-panel-header>
-              <mat-list role="list">
-                <mat-list-item role="listitem">
-                  <p>შესყიდვების რეპორტები</p>
-                </mat-list-item>
-                <mat-list-item role="listitem"
-                  ><p>რეალიზაციის რეპორტები</p>
-                </mat-list-item>
-                <mat-list-item role="listitem">
-                  <p>საქონლის მოძრაობის რეპორტი</p>
-                </mat-list-item>
-                <mat-list-item role="listitem">
-                  <p>რეალიზაციები ზედნადებით</p>
-                </mat-list-item>
-              </mat-list>
-            </mat-expansion-panel>
-
-            <mat-expansion-panel
-              [expanded]="compare5"
-              class="m-3"
-              (opened)="compare5 = true"
-              (closed)="compare5 = false"
-            >
-              <mat-expansion-panel-header>
-                <mat-panel-title> ინტეგრაცია </mat-panel-title>
-              </mat-expansion-panel-header>
-              <mat-list role="list">
-                <mat-list-item role="listitem">
-                  <p>BOG იმპორტი (xlsx)</p>
-                </mat-list-item>
-                <mat-list-item role="listitem"
-                  ><p>TBC იმპორტი (xlsx)</p>
-                </mat-list-item>
-                <mat-list-item role="listitem">
-                  <p>TBC იმპორტი (ინტეგრაცია)</p>
-                </mat-list-item>
-                <mat-list-item role="listitem" class="fit">
-                  <p>სალარო აპარატების ინტეგრაცია</p>
-                </mat-list-item>
-                <mat-list-item role="listitem" class="fit">
-                  <p>საბანკო ტერმინალის ინტეგრაცია</p>
-                </mat-list-item>
-                <mat-list-item role="listitem" class="fit">
-                  <p>ჭკვიანი სასწორების ინტეგრაცია</p>
-                </mat-list-item>
-                <mat-list-item role="listitem" class="fit">
-                  <p>შტრიხკოდის სკანერის ინტეგრაცია</p>
-                </mat-list-item>
-                <mat-list-item role="listitem" class="fit">
-                  <p>ჩამონათვალის პრინტერის ინტეგრაცია</p>
-                </mat-list-item>
-              </mat-list>
-            </mat-expansion-panel>
-            <div>
-              <h2 class="fs-4">ნომენკლატურის რაოდენობა</h2>
-              <p class="text-success fw-bold">შეუზღუდავი</p>
-              <button type="button" class="btn btn-danger">შეუკვეთე</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4">
-        <div class="card text-center m-2">
-          <div class="card-header"><h1 class="mb-0 fw-bold">მინი</h1></div>
-          <div class="card-body">
-            <h1 class="fw-bold p-2">50ლ</h1>
-            <p class="card-text">დამატებითი ლიცენზია 50₾</p>
-            <mat-expansion-panel
-              [expanded]="compare"
-              class="m-3"
-              (opened)="compare = true"
-              (closed)="compare = false"
-            >
-              <mat-expansion-panel-header>
-                <mat-panel-title> ძირითადი მოდულები </mat-panel-title>
-              </mat-expansion-panel-header>
-              <mat-list role="list">
-                <mat-list-item class="fit"
-                  ><p>სტანდარტული სალაროს მოდული</p>
+                <mat-list-item class="text-center">
+                  <p>{{ "StandardCheckoutModule" | translateMain }}</p>
                 </mat-list-item>
                 <mat-list-item
                   role="listitem"
                   class="text-decoration-line-through text-danger"
-                  class="fit"
-                  ><p class="text-danger text-decoration-line-through">
-                    კვების ობიექტის სალაროს მოდული
+                  ><p class="text-danger">
+                    {{ "Cashregister" | translateMain }}
                   </p>
                 </mat-list-item>
                 <mat-list-item role="listitem"
-                  ><p>შესყიდვები RS-ს მეშვეობით</p>
+                  ><p>{{ "PurchasesThroughRS" | translateMain }}</p>
                 </mat-list-item>
                 <mat-list-item role="listitem"
-                  ><p>დაბრუნება RS-ს მეშვეობით</p>
+                  ><p>{{ "ReturnviaRS" | translateMain }}</p>
                 </mat-list-item>
                 <mat-list-item role="listitem"
-                  ><p>პროდუქციის ჩამოწერა</p>
+                  ><p>{{ "WriteOffProducts" | translateMain }}</p>
                 </mat-list-item>
                 <mat-list-item role="listitem"
-                  ><p>სალაროს მართვა</p>
+                  ><p>{{ "cashRegisterManagement" | translateMain }}</p>
                 </mat-list-item>
                 <mat-list-item role="listitem"
-                  ><p>ნაშთების მართვა</p>
+                  ><p>{{ "balanceManagement" | translateMain }}</p>
                 </mat-list-item>
                 <mat-list-item
                   role="listitem"
-                  class="text-decoration-line-through"
-                  ><p class="text-danger">საწყობების მართვა</p>
-                </mat-list-item>
-                <mat-list-item role="listitem"
-                  ><p>კატეგორიების მართვა</p>
-                </mat-list-item>
-                <mat-list-item role="listitem"
-                  ><p>დავალიანებების მართვა</p>
-                </mat-list-item>
-                <mat-list-item
-                  role="listitem"
-                  class="text-decoration-line-through"
-                  ><p class="text-danger">ხელშეკრულებების მართვა</p>
-                </mat-list-item>
-                <mat-list-item
-                  role="listitem"
-                  class="text-decoration-line-through fit"
+                  class="text-decoration-line-through text-danger"
                   ><p class="text-danger">
-                    გადაადგილება საწყობებს შორის
-                  </p></mat-list-item
-                >
-                <mat-list-item role="listitem" class="fit">
-                  <p>პერსონალის მონაცემების მართვა</p>
+                    {{ "ManagementOfWarehouses" | translateMain }}
+                  </p>
                 </mat-list-item>
-                <mat-list-item role="listitem" class="fit">
-                  <p>პერსონალის ფუნქციონალის მართვა</p>
+                <mat-list-item role="listitem"
+                  ><p>{{ "ManageCategories" | translateMain }}</p>
+                </mat-list-item>
+                <mat-list-item role="listitem"
+                  ><p>{{ "debtmanagement" | translateMain }}</p>
+                </mat-list-item>
+                <mat-list-item
+                  role="listitem"
+                  class="text-decoration-line-through text-danger"
+                  ><p class="text-danger">
+                    {{ "ManagementOfContracts" | translateMain }}
+                  </p>
+                </mat-list-item>
+                <mat-list-item
+                  role="listitem"
+                  class="text-decoration-line-through text-danger"
+                  ><p class="text-danger">
+                    {{ "MoveBetweenWarehouses" | translateMain }}
+                  </p>
+                </mat-list-item>
+                <mat-list-item role="listitem" class="text-center">
+                  <p>{{ "ManagementOfPersonnelData" | translateMain }}</p>
+                </mat-list-item>
+                <mat-list-item role="listitem" class="text-center">
+                  <p>
+                    {{ "ManagementOfPersonnelFunctionality" | translateMain }}
+                  </p>
                 </mat-list-item>
               </mat-list>
             </mat-expansion-panel>
@@ -501,69 +326,72 @@
               (closed)="compare2 = false"
             >
               <mat-expansion-panel-header>
-                <mat-panel-title> ინვენტარიზაცია </mat-panel-title>
+                <mat-panel-title>
+                  {{ "Inventory" | translateMain }}</mat-panel-title
+                >
               </mat-expansion-panel-header>
               <mat-list role="list">
                 <mat-list-item role="listitem">
-                  <p>ინვენტარიზაცია ჯგუფით</p>
+                  <p>{{ "InventoryByGroup" | translateMain }}</p>
                 </mat-list-item>
-                <mat-list-item role="listitem" class="fit"
-                  ><p>ინვენტარიზაცია მომწოდებლით</p>
+                <mat-list-item role="listitem"
+                  ><p>{{ "InventoryBySupplier" | translateMain }}</p>
                 </mat-list-item>
-                <mat-list-item role="listitem" class="fit">
-                  <p>ინვენტარიზაცია შედგენილი სიით</p>
+                <mat-list-item role="listitem" class="text-center">
+                  <p>{{ "InventoryWithCompiledList" | translateMain }}</p>
                 </mat-list-item>
-                <mat-list-item
-                  role="listitem"
-                  class="text-decoration-line-through fit"
-                >
-                  <p class="text-danger">ინვენტარიზაციის Android მოდული</p>
+                <mat-list-item role="listitem" class="text-center">
+                  <p>{{ "Inventory Android module" | translateMain }}</p>
                 </mat-list-item>
               </mat-list>
             </mat-expansion-panel>
 
             <mat-expansion-panel
-              [expanded]="compare3"
               class="m-3"
+              [expanded]="compare3"
               (opened)="compare3 = true"
               (closed)="compare3 = false"
             >
               <mat-expansion-panel-header>
-                <mat-panel-title> დამხმარე მოდულები </mat-panel-title>
+                <mat-panel-title
+                  >{{ "SupportModules" | translateMain }}
+                </mat-panel-title>
               </mat-expansion-panel-header>
               <mat-list role="list">
-                <mat-list-item
-                  role="listitem"
-                  class="text-decoration-line-through"
-                >
-                  <p class="text-danger">სალაროს წიგნი</p>
+                <mat-list-item role="listitem">
+                  <p>{{ "CashBook" | translateMain }}</p>
                 </mat-list-item>
                 <mat-list-item role="listitem">
-                  <p>აქციების მართვა</p>
+                  <p>{{ "StockManagement" | translateMain }}</p>
                 </mat-list-item>
                 <mat-list-item role="listitem"
-                  ><p>ავტომატური ბექაფი</p>
+                  ><p>{{ "AutomaticBackup" | translateMain }}</p>
                 </mat-list-item>
                 <mat-list-item role="listitem">
-                  <p>დაგროვების მოდული</p>
+                  <p>{{ "accumulationModule" | translateMain }}</p>
                 </mat-list-item>
                 <mat-list-item role="listitem">
-                  <p>ლოიალობის მოდული</p>
+                  <p>{{ "LoyaltyModule" | translateMain }}</p>
                 </mat-list-item>
                 <mat-list-item role="listitem">
-                  <p>ავტონომიური სალარო</p>
+                  <p>{{ "AutonomousCashRegister" | translateMain }}</p>
                 </mat-list-item>
                 <mat-list-item role="listitem">
-                  <p>ავტომატური შეკვეთები</p>
+                  <p>{{ "AutomaticOrders" | translateMain }}</p>
+                </mat-list-item>
+                <mat-list-item
+                  role="listitem"
+                  class="text-decoration-line-through text-danger"
+                >
+                  <p class="text-danger">
+                    {{ "CalculationAndProduction" | translateMain }}
+                  </p>
                 </mat-list-item>
                 <mat-list-item role="listitem">
-                  <p>კალკულაცია და წარმოება</p>
+                  <p>{{ "ProductConversion" | translateMain }}</p>
                 </mat-list-item>
                 <mat-list-item role="listitem">
-                  <p>პროდუქციის კონვერტაცია</p>
-                </mat-list-item>
-                <mat-list-item role="listitem">
-                  <p>საათობრივი ფასდაკლებები</p>
+                  <p>{{ "HourlyDiscounts" | translateMain }}</p>
                 </mat-list-item>
               </mat-list>
             </mat-expansion-panel>
@@ -575,20 +403,22 @@
               (closed)="compare4 = false"
             >
               <mat-expansion-panel-header>
-                <mat-panel-title> რეპორტები </mat-panel-title>
+                <mat-panel-title
+                  >{{ "reports" | translateMain }}
+                </mat-panel-title>
               </mat-expansion-panel-header>
               <mat-list role="list">
                 <mat-list-item role="listitem">
-                  <p>შესყიდვების რეპორტები</p>
+                  <p>{{ "PurchaseReports" | translateMain }}</p>
                 </mat-list-item>
                 <mat-list-item role="listitem"
-                  ><p>რეალიზაციის რეპორტები</p>
+                  ><p>{{ "RealizationReports" | translateMain }}</p>
                 </mat-list-item>
                 <mat-list-item role="listitem">
-                  <p>საქონლის მოძრაობის რეპორტი</p>
+                  <p>{{ "GoodsMovementReport" | translateMain }}</p>
                 </mat-list-item>
                 <mat-list-item role="listitem">
-                  <p>რეალიზაციები ზედნადებით</p>
+                  <p>{{ "RealizationsWith" | translateMain }}</p>
                 </mat-list-item>
               </mat-list>
             </mat-expansion-panel>
@@ -600,43 +430,297 @@
               (closed)="compare5 = false"
             >
               <mat-expansion-panel-header>
-                <mat-panel-title> ინტეგრაცია </mat-panel-title>
+                <mat-panel-title>
+                  {{ "integration" | translateMain }}
+                </mat-panel-title>
               </mat-expansion-panel-header>
               <mat-list role="list">
                 <mat-list-item role="listitem">
-                  <p>BOG იმპორტი (xlsx)</p>
+                  <p>{{ "BOG" | translateMain }}</p>
                 </mat-list-item>
                 <mat-list-item role="listitem"
-                  ><p>TBC იმპორტი (xlsx)</p>
+                  ><p>{{ "TBC" | translateMain }}</p>
                 </mat-list-item>
                 <mat-list-item role="listitem">
-                  <p>TBC იმპორტი (ინტეგრაცია)</p>
+                  <p>{{ "TBC Import" | translateMain }}</p>
                 </mat-list-item>
-                <mat-list-item role="listitem" class="fit">
-                  <p>სალარო აპარატების ინტეგრაცია</p>
+                <mat-list-item role="listitem">
+                  <p>{{ "IntegrationOfCashRegisters" | translateMain }}</p>
                 </mat-list-item>
-                <mat-list-item role="listitem" class="fit">
-                  <p>საბანკო ტერმინალის ინტეგრაცია</p>
+                <mat-list-item role="listitem">
+                  <p>{{ "BankTerminalIntegration" | translateMain }}</p>
+                </mat-list-item>
+                <mat-list-item role="listitem">
+                  <p>{{ "IntegrationOfSmartScales" | translateMain }}</p>
+                </mat-list-item>
+                <mat-list-item role="listitem" class="text-center">
+                  <p>{{ "BarcodeScannerIntegration" | translateMain }}</p>
+                </mat-list-item>
+                <mat-list-item role="listitem" class="text-center">
+                  <p>{{ "ListPrinterIntegration" | translateMain }}</p>
+                </mat-list-item>
+              </mat-list>
+            </mat-expansion-panel>
+
+            <div>
+              <h2 class="fs-4">
+                {{ "NumberOfNomenclature" | translateMain }}
+              </h2>
+              <p class="text-success fw-bold">
+                {{ "unlimited" | translateMain }}
+              </p>
+              <button type="button" class="btn btn-danger">
+                {{ "orderButton" | translateMain }}
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="card text-center m-2">
+          <div class="card-header">
+            <h1 class="mb-0 fw-bold">
+              {{ "priceMiniHeader" | translateMain }}
+            </h1>
+          </div>
+          <div class="card-body">
+            <h1 class="fw-bold p-2">{{ "priceMini" | translateMain }}</h1>
+            <p class="card-text">
+              {{ "licenseParagraphHeader" | translateMain }}
+            </p>
+            <mat-expansion-panel
+              [expanded]="compare"
+              class="m-3"
+              (opened)="compare = true"
+              (closed)="compare = false"
+            >
+              <mat-expansion-panel-header>
+                <mat-panel-title
+                  >{{ "BasicModules" | translateMain }}
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+              <mat-list role="list">
+                <mat-list-item class="text-center">
+                  <p>{{ "StandardCheckoutModule" | translateMain }}</p>
                 </mat-list-item>
                 <mat-list-item
                   role="listitem"
-                  class="text-decoration-line-through"
-                  class="fit"
+                  class="text-decoration-line-through text-danger"
+                  ><p class="text-danger">
+                    {{ "Cashregister" | translateMain }}
+                  </p>
+                </mat-list-item>
+                <mat-list-item role="listitem"
+                  ><p>{{ "PurchasesThroughRS" | translateMain }}</p>
+                </mat-list-item>
+                <mat-list-item role="listitem"
+                  ><p>{{ "ReturnviaRS" | translateMain }}</p>
+                </mat-list-item>
+                <mat-list-item role="listitem"
+                  ><p>{{ "WriteOffProducts" | translateMain }}</p>
+                </mat-list-item>
+                <mat-list-item role="listitem"
+                  ><p>{{ "cashRegisterManagement" | translateMain }}</p>
+                </mat-list-item>
+                <mat-list-item role="listitem"
+                  ><p>{{ "balanceManagement" | translateMain }}</p>
+                </mat-list-item>
+                <mat-list-item
+                  role="listitem"
+                  class="text-decoration-line-through text-danger"
+                  ><p class="text-danger">
+                    {{ "ManagementOfWarehouses" | translateMain }}
+                  </p>
+                </mat-list-item>
+                <mat-list-item role="listitem"
+                  ><p>{{ "ManageCategories" | translateMain }}</p>
+                </mat-list-item>
+                <mat-list-item role="listitem"
+                  ><p>{{ "debtmanagement" | translateMain }}</p>
+                </mat-list-item>
+                <mat-list-item
+                  role="listitem"
+                  class="text-decoration-line-through text-danger"
+                  ><p class="text-danger">
+                    {{ "ManagementOfContracts" | translateMain }}
+                  </p>
+                </mat-list-item>
+                <mat-list-item
+                  role="listitem"
+                  class="text-decoration-line-through text-danger"
+                  ><p class="text-danger">
+                    {{ "MoveBetweenWarehouses" | translateMain }}
+                  </p>
+                </mat-list-item>
+                <mat-list-item role="listitem" class="text-center">
+                  <p>{{ "ManagementOfPersonnelData" | translateMain }}</p>
+                </mat-list-item>
+                <mat-list-item role="listitem" class="text-center">
+                  <p>
+                    {{ "ManagementOfPersonnelFunctionality" | translateMain }}
+                  </p>
+                </mat-list-item>
+              </mat-list>
+            </mat-expansion-panel>
+
+            <mat-expansion-panel
+              [expanded]="compare2"
+              class="m-3"
+              (opened)="compare2 = true"
+              (closed)="compare2 = false"
+            >
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  {{ "Inventory" | translateMain }}</mat-panel-title
                 >
-                  <p class="text-danger">ჭკვიანი სასწორების ინტეგრაცია</p>
+              </mat-expansion-panel-header>
+              <mat-list role="list">
+                <mat-list-item role="listitem">
+                  <p>{{ "InventoryByGroup" | translateMain }}</p>
                 </mat-list-item>
-                <mat-list-item role="listitem" class="fit">
-                  <p>შტრიხკოდის სკანერის ინტეგრაცია</p>
+                <mat-list-item role="listitem"
+                  ><p>{{ "InventoryBySupplier" | translateMain }}</p>
                 </mat-list-item>
-                <mat-list-item role="listitem" class="fit">
-                  <p>ჩამონათვალის პრინტერის ინტეგრაცია</p>
+                <mat-list-item role="listitem">
+                  <p>{{ "InventoryWithCompiledList" | translateMain }}</p>
+                </mat-list-item>
+                <mat-list-item
+                  role="listitem"
+                  class="text-decoration-line-through text-danger"
+                >
+                  <p class="text-danger">
+                    {{ "Inventory Android module" | translateMain }}
+                  </p>
+                </mat-list-item>
+              </mat-list>
+            </mat-expansion-panel>
+
+            <mat-expansion-panel
+              class="m-3"
+              [expanded]="compare3"
+              (opened)="compare3 = true"
+              (closed)="compare3 = false"
+            >
+              <mat-expansion-panel-header>
+                <mat-panel-title
+                  >{{ "SupportModules" | translateMain }}
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+              <mat-list role="list">
+                <mat-list-item
+                  role="listitem"
+                  class="text-decoration-line-through"
+                >
+                  <p class="text-danger">{{ "CashBook" | translateMain }}</p>
+                </mat-list-item>
+                <mat-list-item role="listitem">
+                  <p>{{ "StockManagement" | translateMain }}</p>
+                </mat-list-item>
+                <mat-list-item role="listitem"
+                  ><p>{{ "AutomaticBackup" | translateMain }}</p>
+                </mat-list-item>
+                <mat-list-item role="listitem">
+                  <p>{{ "accumulationModule" | translateMain }}</p>
+                </mat-list-item>
+                <mat-list-item role="listitem">
+                  <p>{{ "LoyaltyModule" | translateMain }}</p>
+                </mat-list-item>
+                <mat-list-item role="listitem">
+                  <p>{{ "AutonomousCashRegister" | translateMain }}</p>
+                </mat-list-item>
+                <mat-list-item role="listitem">
+                  <p>{{ "AutomaticOrders" | translateMain }}</p>
+                </mat-list-item>
+                <mat-list-item role="listitem">
+                  <p>
+                    {{ "CalculationAndProduction" | translateMain }}
+                  </p>
+                </mat-list-item>
+                <mat-list-item role="listitem">
+                  <p>{{ "ProductConversion" | translateMain }}</p>
+                </mat-list-item>
+                <mat-list-item role="listitem">
+                  <p>{{ "HourlyDiscounts" | translateMain }}</p>
+                </mat-list-item>
+              </mat-list>
+            </mat-expansion-panel>
+
+            <mat-expansion-panel
+              [expanded]="compare4"
+              class="m-3"
+              (opened)="compare4 = true"
+              (closed)="compare4 = false"
+            >
+              <mat-expansion-panel-header>
+                <mat-panel-title
+                  >{{ "reports" | translateMain }}
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+              <mat-list role="list">
+                <mat-list-item role="listitem">
+                  <p>{{ "PurchaseReports" | translateMain }}</p>
+                </mat-list-item>
+                <mat-list-item role="listitem"
+                  ><p>{{ "RealizationReports" | translateMain }}</p>
+                </mat-list-item>
+                <mat-list-item role="listitem">
+                  <p>{{ "GoodsMovementReport" | translateMain }}</p>
+                </mat-list-item>
+                <mat-list-item role="listitem">
+                  <p>{{ "RealizationsWith" | translateMain }}</p>
+                </mat-list-item>
+              </mat-list>
+            </mat-expansion-panel>
+
+            <mat-expansion-panel
+              [expanded]="compare5"
+              class="m-3"
+              (opened)="compare5 = true"
+              (closed)="compare5 = false"
+            >
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  {{ "integration" | translateMain }}
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+              <mat-list role="list">
+                <mat-list-item role="listitem">
+                  <p>{{ "BOG" | translateMain }}</p>
+                </mat-list-item>
+                <mat-list-item role="listitem"
+                  ><p>{{ "TBC" | translateMain }}</p>
+                </mat-list-item>
+                <mat-list-item role="listitem">
+                  <p>{{ "TBC Import" | translateMain }}</p>
+                </mat-list-item>
+                <mat-list-item role="listitem">
+                  <p>{{ "IntegrationOfCashRegisters" | translateMain }}</p>
+                </mat-list-item>
+                <mat-list-item role="listitem">
+                  <p>{{ "BankTerminalIntegration" | translateMain }}</p>
+                </mat-list-item>
+                <mat-list-item
+                  role="listitem"
+                  class="text-decoration-line-through text-danger"
+                >
+                  <p class="text-danger">
+                    {{ "IntegrationOfSmartScales" | translateMain }}
+                  </p>
+                </mat-list-item>
+                <mat-list-item role="listitem" class="text-center">
+                  <p>{{ "BarcodeScannerIntegration" | translateMain }}</p>
+                </mat-list-item>
+                <mat-list-item role="listitem" class="text-center">
+                  <p>{{ "ListPrinterIntegration" | translateMain }}</p>
                 </mat-list-item>
               </mat-list>
             </mat-expansion-panel>
             <div>
-              <h2 class="fs-4">ნომენკლატურის რაოდენობა</h2>
+              <h2 class="fs-4">{{ "NumberOfNomenclature" | translateMain }}</h2>
               <p class="text-success fw-bold">1500</p>
-              <button type="button" class="btn btn-danger">შეუკვეთე</button>
+              <button type="button" class="btn btn-danger">
+                {{ "orderButton" | translateMain }}
+              </button>
             </div>
           </div>
         </div>

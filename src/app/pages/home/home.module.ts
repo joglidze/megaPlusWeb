@@ -9,7 +9,10 @@ import { PriceSectionComponent } from './price-section/price-section.component';
 import { MatListModule } from '@angular/material/list';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { SubscribeComponent } from './subscribe/subscribe.component';
-import { TranslationnModule } from 'src/app/translationn/translationn.module';
+import { SharedModule } from 'src/app/shared/shared.module';
+import { PagesRoutingModule } from '../pages-routing.module';
+
+
 @NgModule({
   declarations: [
     HomeComponent,
@@ -19,7 +22,14 @@ import { TranslationnModule } from 'src/app/translationn/translationn.module';
     ProgramVisualComponent,
     PriceSectionComponent,
     SubscribeComponent,
+    
   ],
-  imports: [CommonModule, MatListModule, MatExpansionModule,TranslationnModule],
+  imports: [
+    CommonModule,
+    MatListModule,
+    MatExpansionModule,
+    SharedModule,
+    PagesRoutingModule,
+  ],
 })
 export class HomeModule {}

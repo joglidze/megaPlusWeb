@@ -8,15 +8,17 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { TranslationnModule } from './translationn/translationn.module';
 
+
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent,],
   imports: [
     BrowserModule,
     AppRoutingModule,
     PagesModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    TranslationnModule
+    TranslationnModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent],
