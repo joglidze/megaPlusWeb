@@ -15,6 +15,8 @@ import { TranslationnModule } from '../translationn/translationn.module';
 import { MatSelectModule } from '@angular/material/select';
 import { MatButtonModule } from '@angular/material/button';
 import { SharedModule } from '../shared/shared.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CardPageComponent } from './blog-page/card-page/card-page.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +25,7 @@ import { SharedModule } from '../shared/shared.module';
     FooterComponent,
     ContactPageComponent,
     BlogPageComponent,
+    CardPageComponent,
     
   ],
   imports: [
@@ -35,6 +38,8 @@ import { SharedModule } from '../shared/shared.module';
     SharedModule,
     TranslationnModule,
     MatButtonModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
 })
 export class PagesModule {}

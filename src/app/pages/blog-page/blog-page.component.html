@@ -1,14 +1,45 @@
 <div class="container margin-top">
-  <div class="card margin-top" style="width: 18rem">
-    <img
-      src="https://nlk.ge/sitepad-data/uploads/2021/10/MTAVARI-PANELI-1-768x478.jpg"
-      class="card-img-top"
-      alt="..."
-    />
-    <div class="card-body">
-      <h1 class="card-title fw-bold">ფუნქციონალი</h1>
-      <div class="text-end">
-        <a class="btn btn-primary">Read More</a>
+  <div class="row margin-auto">
+    <div class="col-sm">
+      <div class="card m-auto" style="width: 18rem" routerLink="retailSales" >
+        <img src="/assets/images/video1.png" class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h2 class="card-title">საცალო რეალიზაციები (Retail sales)</h2>
+          
+          <button class="btn btn-danger btn-round" routerLink="retailSales">
+            {{ "buttonSeeMore" | translateMain }}
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm m-auto">
+      <div class="card" style="width: 18rem">
+        <img src="..." class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+          <button class="btn btn-danger btn-round" routerLink="title2">
+            {{ "buttonSeeMore" | translateMain }}
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm m-auto">
+      <div class="card" style="width: 18rem">
+        <img src="..." class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+          <button class="btn btn-danger btn-round" routerLink="title3">
+            {{ "buttonSeeMore" | translateMain }}
+          </button>
+        </div>
       </div>
     </div>
   </div>

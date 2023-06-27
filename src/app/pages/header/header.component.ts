@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { FormControl, Validators } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { TranslateService } from '@ngx-translate/core';
 import { TranslationService } from 'src/app/core/translation.service';
 import { TranslateMainPipe } from 'src/app/shared/translate-main.pipe';
@@ -12,6 +12,7 @@ import { TranslateMainPipe } from 'src/app/shared/translate-main.pipe';
 })
 export class HeaderComponent implements OnInit {
   menu: boolean = true;
+
   navbar: any;
   constructor(private translationService: TranslationService) {}
 
@@ -22,7 +23,7 @@ export class HeaderComponent implements OnInit {
     this.menu = !this.menu;
   }
 
-  switchLanguage(lang: any) {
-    return this.translationService.setLanguage(lang);
+  switchLanguage(event: any) {
+    return this.translationService.setLanguage(event);
   }
 }
