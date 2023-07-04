@@ -1,0 +1,11 @@
+[
+    {
+      "retailCardHeader": "Retail",
+      "photo":"/assets/images/video1.png",
+      "video": "https://www.youtube.com/embed/70z7lGud-yI"
+    },
+    {
+      "name": "Object 2",
+      "description": "This is the second object."
+    }
+  ]

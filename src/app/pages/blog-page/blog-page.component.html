@@ -1,46 +1,19 @@
-<div class="container margin-top">
-  <div class="row margin-auto">
-    <div class="col-sm">
-      <div class="card m-auto" style="width: 18rem" routerLink="retailSales" >
-        <img src="/assets/images/video1.png" class="card-img-top" alt="..." />
+<div class="container margin-top" >
+  <div class="row mb-4" >
+    <div class="col-sm"*ngFor="let blog of mainBlogData" >
+      <div class="card m-auto"        [routerLink]="blog.retailCardHeader"style="width:350px" >
+        <img src="{{blog.photo}}" class="card-img-top" [alt]="blog.retailCardHeader" />
         <div class="card-body">
-          <h2 class="card-title">საცალო რეალიზაციები (Retail sales)</h2>
-          
-          <button class="btn btn-danger btn-round" routerLink="retailSales">
+          <h2 class="card-title fw-semibold">
+            {{ "retailCardHeader" | translateMain}}
+          </h2>
+
+          <button class="btn btn-danger btn-round" [routerLink]="blog.retailCardHeader" >
             {{ "buttonSeeMore" | translateMain }}
           </button>
         </div>
       </div>
     </div>
-    <div class="col-sm m-auto">
-      <div class="card" style="width: 18rem">
-        <img src="..." class="card-img-top" alt="..." />
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </p>
-          <button class="btn btn-danger btn-round" routerLink="title2">
-            {{ "buttonSeeMore" | translateMain }}
-          </button>
-        </div>
-      </div>
-    </div>
-    <div class="col-sm m-auto">
-      <div class="card" style="width: 18rem">
-        <img src="..." class="card-img-top" alt="..." />
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </p>
-          <button class="btn btn-danger btn-round" routerLink="title3">
-            {{ "buttonSeeMore" | translateMain }}
-          </button>
-        </div>
-      </div>
-    </div>
+    
   </div>
 </div>

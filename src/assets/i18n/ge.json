@@ -12,8 +12,8 @@
   "price": "ფასები",
   "priceParagraph": "ფასი არის ყოველთვიური და მოიცავს მომსახურებასაც თანხები მოცემულია დღგ-ს ჩათვლით",
 
-  "address":"თბილისი, წერეთლის 116",
-  "about Us":"ჩვენს შესახებ",
+  "address": "თბილისი, წერეთლის 116",
+  "about Us": "ჩვენს შესახებ",
 
   "subscribe": "სიახლეების გამოწერა",
   "subscribeButton": "გამოწერა",
@@ -76,5 +76,9 @@
 
   "NumberOfNomenclature": "ნომენკლატურის რაოდენობა",
   "unlimited": "შეუზღუდავი",
-  "orderButton":"შეუკვეთე"
+  "orderButton": "შეუკვეთე",
+
+  
+  "retailCardHeader": "საცალო რეალიზაციები",
+  "RetailVideo":"https://www.youtube.com/embed/70z7lGud-yI"
 }

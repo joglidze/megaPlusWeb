@@ -78,5 +78,7 @@
 
   "NumberOfNomenclature": "Номер номенклатуры",
   "unlimited": "неограниченный",
-  "orderButton": "получить"
+  "orderButton": "получить",
+
+  "retailCardHeader":"Розничная торговля"
 }
