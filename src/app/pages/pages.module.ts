@@ -17,7 +17,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { SharedModule } from '../shared/shared.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CardPageComponent } from './blog-page/card-page/card-page.component';
-
+import { MatDialogModule } from '@angular/material/dialog';
 @NgModule({
   declarations: [
     PagesComponent,
@@ -26,7 +26,6 @@ import { CardPageComponent } from './blog-page/card-page/card-page.component';
     ContactPageComponent,
     BlogPageComponent,
     CardPageComponent,
-    
   ],
   imports: [
     CommonModule,
@@ -40,6 +39,7 @@ import { CardPageComponent } from './blog-page/card-page/card-page.component';
     MatButtonModule,
     FormsModule,
     ReactiveFormsModule,
+    MatDialogModule,
   ],
 })
 export class PagesModule {}

@@ -12,7 +12,6 @@ import { SubscribeComponent } from './subscribe/subscribe.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { PagesRoutingModule } from '../pages-routing.module';
 
-
 @NgModule({
   declarations: [
     HomeComponent,
@@ -22,7 +21,6 @@ import { PagesRoutingModule } from '../pages-routing.module';
     ProgramVisualComponent,
     PriceSectionComponent,
     SubscribeComponent,
-    
   ],
   imports: [
     CommonModule,
