@@ -11,6 +11,8 @@ export class BlogPageComponent implements OnInit {
 
   ngOnInit(): void {
     this.getBlogCards();
+    this.blogPageService.setIntoLocaStorage();
+    console.log('test');
   }
   constructor(private blogPageService: BlogPageService) {}
 

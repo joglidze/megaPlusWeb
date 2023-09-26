@@ -35,20 +35,16 @@
           }}</a>
         </li>
       </button>
-      <ul class="navbar-nav" mat-menu-item>
-        <li class="nav-item m-1 ml-auto" >
-          <form class="w-25 custom-dropdown" >
-            <select id="mySelectId"  (change)="switchLanguage($event)">
-              <option value="ge">GE</option>
-              <option value="en">EN</option>
-              <option value="ru" >RU</option>
-              <option value="az" >AZ</option>
-              <option value="uz" >UZ</option>
-              
-            </select>
-          </form>
-        </li>
-      </ul>
+
+      <form class="w-25 custom-dropdown">
+        <select id="mySelectId" (change)="switchLanguage($event)">
+          <option value="ge">GE</option>
+          <option value="en">EN</option>
+          <option value="ru">RU</option>
+          <option value="az">AZ</option>
+          <option value="uz">UZ</option>
+        </select>
+      </form>
     </mat-menu>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">

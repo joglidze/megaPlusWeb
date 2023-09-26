@@ -8,7 +8,7 @@ import { TranslateService } from '@ngx-translate/core';
   styleUrls: ['./pages.component.scss'],
 })
 export class PagesComponent implements OnInit {
-  
+  load: boolean = false;
   constructor(
     private translateService: TranslateService,
     private http: HttpClient
@@ -21,5 +21,6 @@ export class PagesComponent implements OnInit {
     this.http.get<any[]>('./assets/i18n/en.json').subscribe((res) => {
       console.log(res);
     });
+   
   }
 }
